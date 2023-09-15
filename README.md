@@ -1,1 +1,1 @@
-# Infinitum
+# Infinitum team
