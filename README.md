@@ -27,3 +27,12 @@ yarn dev
 pnpm dev
 
 ```
+
+
+```bash
+
+link ke production : https://infinitum-xi.vercel.app/
+
+link ke staging : 
+
+```
