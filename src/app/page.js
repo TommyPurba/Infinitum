@@ -1,6 +1,9 @@
+import { Register } from "@/components/Auth/Register";
 
 export default function Page() {
   return (
-    <div>Page</div>
-  )
+    <div>
+      <Register />
+    </div>
+  );
 }
