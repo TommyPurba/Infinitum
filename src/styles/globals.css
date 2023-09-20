@@ -1,3 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background-main: #fffffe;
+  --button-main: #ffd803;
+  --headline-text: #272343;
+  --button-text: #272343;
+  --paraghraph-text: #2d334a;
+
+  --stroke-color: #272343;
+  --background-secondary: #e3f6f5;
+  --background-tertiary: #bae8e8;
+  --highlight-color: #ffd803;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-main: #232946;
+    --button-main: #eebbc3;
+    --headline-text: #fffffe;
+    --button-text: #232946;
+    --paraghraph-text: #b8c1ec;
+
+    --stroke-color: #121629;
+    --background-secondary: #fffffe;
+    --background-tertiary: #eebbc3;
+    --highlight-color: #eebbc3;
+  }
+}
+
+@layer components {
+  .cardStyle {
+    @apply rounded-2xl border-2 hover:shadow-md hover:shadow-slate-400 duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  .eventTitle,
+  .locationTitle {
+    @apply font-medium text-lg;
+  }
+
+  .dateTitle {
+    @apply text-sm font-medium text-red-600;
+  }
+
+  .buildingTitle,
+  .priceTitle {
+    @apply text-xs font-normal text-slate-500;
+  }
+
+  .companyTitle {
+    @apply text-sm font-medium;
+  }
+
+  .iconAnimation {
+    @apply border-[1px] bg-white rounded-full p-2 w-fit hover:bg-slate-300 duration-300 transition ease-in-out cursor-pointer;
+  }
+}
