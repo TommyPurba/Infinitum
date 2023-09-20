@@ -33,6 +33,6 @@ pnpm dev
 
 link ke production : https://infinitum-xi.vercel.app/
 
-link ke staging : 
+link ke staging : https://infinitum-staging-project.vercel.app/
 
 ```
