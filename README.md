@@ -27,7 +27,11 @@ yarn dev
 pnpm dev
 
 ```
+```bash
 
+untuk memakai staging dan main, ketika memakai staging di pastikan untuk merger request harus menuju staging, dan sebaliknya untuk main dipastikan merger ke main
+
+```
 
 ```bash
 
