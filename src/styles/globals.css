@@ -4,35 +4,23 @@
 
 :root {
   --background-main: #fffffe;
-  --button-main: #ffd803;
+  --button-main: #272343;
+  --button-hover: #ffd803;
   --headline-text: #272343;
-  --button-text: #272343;
+  --button-text: #fffffe;
+  --button-text-hover: #272343;
   --paraghraph-text: #2d334a;
 
   --stroke-color: #272343;
   --background-secondary: #e3f6f5;
   --background-tertiary: #bae8e8;
   --highlight-color: #ffd803;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-main: #232946;
-    --button-main: #eebbc3;
-    --headline-text: #fffffe;
-    --button-text: #232946;
-    --paraghraph-text: #b8c1ec;
-
-    --stroke-color: #121629;
-    --background-secondary: #fffffe;
-    --background-tertiary: #eebbc3;
-    --highlight-color: #eebbc3;
-  }
+  --color-primary: #232946;
 }
 
 @layer components {
   .cardStyle {
-    @apply rounded-2xl border-2 hover:shadow-md hover:shadow-slate-400 duration-300 transition ease-in-out cursor-pointer;
+    @apply bg-secondary rounded-2xl border-2 hover:shadow-md hover:shadow-slate-400 duration-300 transition ease-in-out cursor-pointer;
   }
 
   .eventTitle,
@@ -54,6 +42,6 @@
   }
 
   .iconAnimation {
-    @apply border-[1px] bg-white rounded-full p-2 w-fit hover:bg-slate-300 duration-300 transition ease-in-out cursor-pointer;
+    @apply border-[1px] text-button-text bg-button-main rounded-full p-2 w-fit hover:bg-button-hover hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
   }
 }

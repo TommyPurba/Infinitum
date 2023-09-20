@@ -16,10 +16,10 @@ export const Card = () => {
         />
         <div className="absolute -bottom-4 right-2 flex gap-x-3">
           <div className="iconAnimation">
-            <Heart color="#475569" size={20} strokeWidth={3} />
+            <Heart size={20} strokeWidth={3} />
           </div>
           <div className="iconAnimation">
-            <Upload color="#475569" size={20} strokeWidth={3} />
+            <Upload size={20} strokeWidth={3} />
           </div>
         </div>
       </div>
