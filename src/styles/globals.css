@@ -45,17 +45,21 @@
     font-family: "Fugaz One", cursive;
   }
 
-  .eventTitle,
+  .eventTitle {
+    @apply font-bold text-xl;
+  }
+
   .locationTitle {
-    @apply font-medium text-lg;
+    @apply font-medium text-base;
   }
 
   .dateTitle {
-    @apply text-sm font-medium text-red-600;
+    @apply text-sm font-semibold text-red-600;
   }
 
   .buildingTitle,
-  .priceTitle {
+  .priceTitle,
+  .descriptionTitle {
     @apply text-xs font-normal text-slate-500;
   }
 
@@ -76,6 +80,10 @@
     @apply px-6 py-4 rounded-full text-button-text font-semibold bg-button-main;
   }
 
+  .joinButton {
+    @apply px-6 py-2 rounded-full text-button-text font-medium bg-button-main hover:bg-highlight-color hover:text-paraghraph-text;
+  }
+
   .buttonLoad {
     font-family: "Poppins", sans-serif;
     @apply px-8 py-3 bg-background-tertiary font-semibold text-paraghraph-text rounded-full hover:text-button-text-hover hover:bg-highlight-color duration-300 transition ease-in-out cursor-pointer;
@@ -85,8 +93,8 @@
     @apply focus:outline-none shadow-none border-t-2 border-l-2 border-b-2  duration-300 transition ease-in-out cursor-pointer;
   }
 
-  .categoryStyle {
-    @apply p-8 text-button-text bg-button-main rounded-full w-fit hover:bg-background-tertiary hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
+  .categoryAnimation {
+    @apply p-8 text-button-text bg-button-main rounded-full w-fit hover:scale-90 hover:bg-background-tertiary hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
   }
 
   .floatingStyle {
