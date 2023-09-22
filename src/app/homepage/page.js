@@ -1,10 +1,18 @@
 import React from "react";
-import { Card } from "@/components/Card";
+import { CardDisplay } from "@/components/CardDisplay";
+import { Header } from "@/components/Header";
+import { Headline } from "@/components/Headline";
+import { Footer } from "@/components/Footer";
 
 export default function Page() {
   return (
-    <div className=" flex gap-8 my-10 mx-8">
-      <Card />
+    <div>
+      <Header />
+      <Headline />
+      <div>
+        <CardDisplay />
+      </div>
+      <Footer />
     </div>
   );
 }

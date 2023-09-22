@@ -1,10 +1,9 @@
-import { Button } from "@/lib/button"
-
+import { Button } from "@/lib/button";
 
 export default function Page() {
   return (
     <div>
       <Button />
     </div>
-  )
+  );
 }
