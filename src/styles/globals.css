@@ -1,6 +1,24 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background-main: #fffffe;
+  --button-main: #272343;
+  --button-hover: #ffd803;
+  --headline-text: #272343;
+  --button-text: #fffffe;
+  --button-text-hover: #272343;
+  --paraghraph-text: #2d334a;
+
+  --stroke-color: #272343;
+  --background-secondary: #e3f6f5;
+  --background-tertiary: #bae8e8;
+  --highlight-color: #ffd803;
+  --color-primary: #232946;
+}
+
 
 @layer base {
   input {
@@ -12,3 +30,31 @@
   }
 }
 
+
+@layer components {
+  .cardStyle {
+    @apply bg-secondary rounded-2xl border-2 hover:shadow-md hover:shadow-slate-400 duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  .eventTitle,
+  .locationTitle {
+    @apply font-medium text-lg;
+  }
+
+  .dateTitle {
+    @apply text-sm font-medium text-red-600;
+  }
+
+  .buildingTitle,
+  .priceTitle {
+    @apply text-xs font-normal text-slate-500;
+  }
+
+  .companyTitle {
+    @apply text-sm font-medium;
+  }
+
+  .iconAnimation {
+    @apply border-[1px] text-button-text bg-button-main rounded-full p-2 w-fit hover:bg-button-hover hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
+  }
+}
