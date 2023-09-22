@@ -86,7 +86,7 @@
   }
 
   .categoryStyle {
-    @apply p-8 text-button-text bg-button-main rounded-full w-fit hover:bg-button-hover hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
+    @apply p-8 text-button-text bg-button-main rounded-full w-fit hover:bg-background-tertiary hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
   }
 
   .floatingStyle {
