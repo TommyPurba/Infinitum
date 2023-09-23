@@ -23,13 +23,6 @@
 }
 
 @layer base {
-  input {
-    @apply w-full px-3 py-1 border border-gray-300 rounded-md shadow-sm;
-  }
-
-  button {
-    @apply w-full items-center px-4 py-2 border border-transparent rounded-md shadow-sm bg-[#ffd803];
-  }
 }
 
 @layer components {
@@ -38,6 +31,14 @@
   }
   .change {
     @apply scale-105 bg-scd text-white rounded-2xl px-3;
+  }
+
+  .registerInput {
+    @apply w-full px-3 py-1 border border-gray-300 rounded-md shadow-sm;
+  }
+
+  .registerButton {
+    @apply w-full items-center px-4 py-2 border border-transparent rounded-md shadow-sm bg-[#ffd803];
   }
 
   .cardStyle {

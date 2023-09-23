@@ -1,5 +1,5 @@
-import { Register } from "@/components/Auth/Register";
+import React from "react";
 
 export default function Page() {
-  return <Register />;
+  return <div>Page</div>;
 }
