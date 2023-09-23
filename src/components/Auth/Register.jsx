@@ -5,8 +5,13 @@ export const Register = () => {
         <div className="pb-10 space-y-2">
           <h1 className="text-2xl font-bold text-center">Register</h1>
           <input className="registerInput" name="name" placeholder="Name" />
-          <input name="email" placeholder="Email" />
-          <input name="password" type="password" placeholder="Password" />
+          <input className="registerInput" name="email" placeholder="Email" />
+          <input
+            className="registerInput"
+            name="password"
+            type="password"
+            placeholder="Password"
+          />
           <button className="registerButton">Register</button>
         </div>
       </div>

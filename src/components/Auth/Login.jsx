@@ -1,6 +1,7 @@
 import Image from "next/image";
 import loginImage from "/public/avatar.png";
 
+
 export const Login = () => {
   return (
     <div className="h-screen flex justify-center items-center">
@@ -17,14 +18,16 @@ export const Login = () => {
             <input
               type="email"
               placeholder="Email"
-              className="form-input px-4 py-3 rounded-md"
+              className="form-input loginInput"
             />
             <input
               type="password"
               placeholder="Password"
-              className="form-input px-4 py-3 rounded-md"
+              className="form-input loginInput"
             />
-            <button className="loginButton">Login</button>
+            <button className="loginButton px-4 py-3 rounded-md w-full bg-highlight-color font-semibold text-base">
+              Login
+            </button>
             <a href="http://" className="underline text-blue-400">
               Forgot Password
             </a>

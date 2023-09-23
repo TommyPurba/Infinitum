@@ -102,6 +102,10 @@
     @apply px-6 py-2 rounded-full text-button-text font-medium bg-button-main hover:bg-highlight-color hover:text-paraghraph-text;
   }
 
+  .loginInput {
+    @apply px-4 py-3 rounded-md w-full border-2 hover:border-highlight-color focus:outline-none;
+  }
+
   .buttonLoad {
     font-family: "Poppins", sans-serif;
     @apply px-8 py-3 bg-background-tertiary font-semibold text-paraghraph-text rounded-full hover:text-button-text-hover hover:bg-highlight-color duration-300 transition ease-in-out cursor-pointer;
