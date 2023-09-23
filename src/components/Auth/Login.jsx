@@ -8,7 +8,7 @@ export const Login = () => {
   const { isLoading, loginData, handleEventChange, handleLogin } = useLogin();
 
   const router = useRouter();
- 
+
   const handleClick = () => {
     router.push("../../register");
   };
@@ -46,7 +46,7 @@ export const Login = () => {
             >
               Login
             </button>
-            <div className="flex gap-2">
+            <div className="flex justify-between gap-2">
               <a
                 href="http://"
                 className="underline text-blue-400 hover:text-blue-600  "

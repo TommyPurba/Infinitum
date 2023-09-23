@@ -17,8 +17,8 @@ export const Timer = () => {
 
   return (
     <div className="clock flex justify-center items-center">
-      <div className="blur-md invert brightness-150 bg-white absolute w-24 h-6"></div>
-      <div className="text-sky-200 relative font-bold">
+      <div className="brightness-150 bg-white absolute w-24 h-6"></div>
+      <div className=" text-highlight-color relative text-3xl font-extrabold">
         {hours < 10 ? `0${hours}` : hours}:
         {minutes < 10 ? `0${minutes}` : minutes}:
         {seconds < 10 ? `0${seconds}` : seconds}

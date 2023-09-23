@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Find } from "./Find";
 import { useRouter } from "next/navigation";
