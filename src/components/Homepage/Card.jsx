@@ -25,7 +25,7 @@ export const Card = ({ name, description, location, date }) => {
       month: "short",
     });
   }
-
+  
   //   const [content, setContent] = useState("");
   //   const router = useRouter();
 

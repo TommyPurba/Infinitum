@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Sansita } from "next/font/google";
 
 export const Headline = () => {
   return (
