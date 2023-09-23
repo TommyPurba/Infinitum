@@ -1,10 +1,5 @@
-import { Button } from "@/lib/button"
-
+import { Register } from "@/components/Auth/Register";
 
 export default function Page() {
-  return (
-    <div>
-      <Button />
-    </div>
-  )
+  return <Register />;
 }

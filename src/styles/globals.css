@@ -1,6 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background-main: #fffffe;
+  --button-main: #272343;
+  --button-hover: #ffd803;
+  --headline-text: #272343;
+  --button-text: #fffffe;
+  --button-text-hover: #272343;
+  --paraghraph-text: #2d334a;
+
+  --stroke-color: #272343;
+  --background-secondary: #e3f6f5;
+  --background-tertiary: #bae8e8;
+  --highlight-color: #ffd803;
+  --color-primary: #232946;
+}
+
+@layer base {
+  input {
+    @apply w-full px-3 py-1 border border-gray-300 rounded-md shadow-sm;
+  }
+
+  button {
+    @apply w-full items-center px-4 py-2 border border-transparent rounded-md shadow-sm bg-[#ffd803];
+  }
+}
 
 @layer components {
   .card {
@@ -8,5 +38,83 @@
   }
   .change {
     @apply scale-105 bg-scd text-white rounded-2xl px-3;
+  }
+
+  .cardStyle {
+    @apply bg-white rounded-2xl hover:shadow-md hover:scale-90 duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  h1 {
+    font-family: "Sansita", sans-serif;
+  }
+  h2 {
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    @apply text-paraghraph-text;
+  }
+
+  .logoText {
+    font-family: "Fugaz One", cursive;
+  }
+
+  .eventTitle {
+    @apply font-bold text-xl;
+  }
+
+  .locationTitle {
+    @apply font-medium text-base;
+  }
+
+  .dateTitle {
+    @apply text-sm font-semibold text-red-600;
+  }
+
+  .buildingTitle,
+  .priceTitle,
+  .descriptionTitle {
+    @apply text-xs font-normal text-slate-500;
+  }
+
+  .companyTitle {
+    @apply text-sm font-medium;
+  }
+
+  .iconAnimation {
+    @apply border-[1px] text-button-text bg-button-main rounded-full p-2 w-fit hover:bg-button-hover hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  .buttonAnimation {
+    font-family: "Poppins", sans-serif;
+    @apply px-6 py-2  font-semibold text-paraghraph-text rounded-full hover:text-button-text-hover hover:bg-background-tertiary duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  .buttonStyle {
+    @apply px-6 py-4 rounded-full text-button-text font-semibold bg-button-main;
+  }
+
+  .joinButton {
+    @apply px-6 py-2 rounded-full text-button-text font-medium bg-button-main hover:bg-highlight-color hover:text-paraghraph-text;
+  }
+
+  .buttonLoad {
+    font-family: "Poppins", sans-serif;
+    @apply px-8 py-3 bg-background-tertiary font-semibold text-paraghraph-text rounded-full hover:text-button-text-hover hover:bg-highlight-color duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  #inputSearch {
+    @apply focus:outline-none shadow-none border-t-2 border-l-2 border-b-2  duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  .categoryAnimation {
+    @apply p-8 text-button-text bg-button-main rounded-full w-fit hover:scale-90 hover:bg-background-tertiary hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  .floatingStyle {
+    @apply flex absolute items-center justify-center;
   }
 }
