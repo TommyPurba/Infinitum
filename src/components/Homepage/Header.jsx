@@ -2,6 +2,7 @@
 import React from "react";
 import { Find } from "./Find";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const Header = () => {
   const router = useRouter();
@@ -22,7 +23,9 @@ export const Header = () => {
         <Find />
       </div>
       <div className=" flex justify-center items-center gap-2 font-medium">
-        <button className="buttonAnimation">Find Event</button>
+        <Link href="#eventSection">
+          <button className="buttonAnimation">Find Event</button>
+        </Link>
         <button className="buttonAnimation">Create Event</button>
         <button className="buttonAnimation" onClick={handleClick}>
           Log in

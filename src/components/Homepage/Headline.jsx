@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 export const Headline = () => {
   return (
@@ -20,9 +20,11 @@ export const Headline = () => {
             Check out our events schedule for the coming months.
           </p>
         </div>
-        <button className="buttonAnimation buttonStyle">
-          Find your next event
-        </button>
+        <Link href="#eventSection">
+          <button className="buttonAnimation buttonStyle">
+            Find your next event
+          </button>
+        </Link>
       </div>
     </div>
   );

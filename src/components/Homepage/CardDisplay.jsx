@@ -13,7 +13,10 @@ import {
 
 export const CardDisplay = ({ eventsData }) => {
   return (
-    <div className=" relative m-auto gap-8 bg-secondary py-20">
+    <div
+      id="eventSection"
+      className=" relative m-auto gap-8 bg-secondary py-20"
+    >
       <div>
         <div className="categoryAnimation floatingStyle -top-24 left-[105px]">
           <Music4 size={70} />
@@ -44,19 +47,17 @@ export const CardDisplay = ({ eventsData }) => {
       <div className=" flex justify-center items-center flex-col">
         <h2 className=" text-5xl font-bold mb-10 mt-16 pb-10">Explore Event</h2>
         <div className=" grid grid-cols-3 gap-16 pb-28">
-          {eventsData.map(
-            ({ name, description, location, date }) => {
-              return (
-                <Card
-                  key={name}
-                  name={name}
-                  description={description}
-                  location={location}
-                  date={date}
-                />
-              );
-            }
-          )}
+          {eventsData.map(({ name, description, location, date }) => {
+            return (
+              <Card
+                key={name}
+                name={name}
+                description={description}
+                location={location}
+                date={date}
+              />
+            );
+          })}
         </div>
       </div>
       <div className="flex justify-center border-t-2 pt-8 mx-8">
