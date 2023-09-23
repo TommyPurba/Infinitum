@@ -1,7 +1,5 @@
 import React from "react";
-import Image from "next/image";
 import { Find } from "./Find";
-import EventMaker from "../assets/eventmakers.png";
 
 export const Header = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import { CardDisplay } from "@/components/CardDisplay";
-import { Header } from "@/components/Header";
-import { Headline } from "@/components/Headline";
-import { Footer } from "@/components/Footer";
+import { CardDisplay } from "@/components/Homepage/CardDisplay";
+import { Header } from "@/components/Homepage/Header";
+import { Headline } from "@/components/Homepage/Headline";
+import { Footer } from "@/components/Homepage/Footer";
 
 async function getEvents() {
   const res = await fetch("https://eventmakers-api.vercel.app/api/event", {
