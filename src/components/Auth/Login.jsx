@@ -8,7 +8,7 @@ export const Login = () => {
   const { isLoading, loginData, handleEventChange, handleLogin } = useLogin();
 
   const router = useRouter();
-
+ 
   const handleClick = () => {
     router.push("../../register");
   };
@@ -24,8 +24,8 @@ export const Login = () => {
           <div className="pb-10 space-y-2">
             <p>Welcome Back! </p>
             <h1 className="text-2xl font-bold">Login to your account</h1>
-            <input  
-              value={loginData.email} 
+            <input
+              value={loginData.email}
               name="email"
               placeholder="Email"
               className="form-input loginInput"
@@ -39,7 +39,13 @@ export const Login = () => {
               className="form-input loginInput"
               onChange={handleEventChange}
             />
-            <button isLoading={isLoading} className="loginButton" onClick={handleLogin}>Login</button>
+            <button
+              isLoading={isLoading}
+              className="loginButton"
+              onClick={handleLogin}
+            >
+              Login
+            </button>
             <div className="flex gap-2">
               <a
                 href="http://"

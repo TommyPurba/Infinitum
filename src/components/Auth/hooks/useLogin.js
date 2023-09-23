@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 export const useLogin = () => {
   const [isLoading, setLoading] = useState(false);
@@ -9,6 +10,8 @@ export const useLogin = () => {
     email: "",
     password: "",
   };
+
+  const router = useRouter();
 
   const [loginData, setLoginData] = useState(initialLoginData);
 
@@ -28,10 +31,21 @@ export const useLogin = () => {
       }
     );
     const data = await res.json();
-    Cookies.set("token", data.token);
-    alert("pasword anda benar bro...");
-    console.log(data);
-    setLoading(false);
+    if (data.message === "User not found") {
+      alert("User not found");
+    } else {
+      Cookies.set("token", data.token);
+      alert("pasword anda benar bro...");
+      console.log(data);
+      setLoading(false);
+      router.push("../../../dashboard");
+    }
+
+    // console.log(data.token);
+    // Cookies.set("token", data.token);
+    // alert("pasword anda benar bro...");
+    // console.log(data);
+    // setLoading(false);
   };
 
   return { isLoading, loginData, handleEventChange, handleLogin };
