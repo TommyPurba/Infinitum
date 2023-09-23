@@ -1,7 +1,16 @@
+"use client"
 import Image from "next/image";
 import loginImage from "/public/avatar.png";
+import { useRouter } from "next/navigation";
+
+
 
 export const Login = () => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('../../register');
+  };
   return (
     <div className="h-screen flex justify-center items-center">
       <div className="flex justify-center space-x-4">
@@ -25,9 +34,12 @@ export const Login = () => {
               className="form-input loginInput"
             />
             <button className="loginButton ">Login</button>
-            <a href="http://" className="underline text-blue-400">
+            <div className="flex gap-2">
+            <a href="http://" className="underline text-blue-400 hover:text-blue-600  ">
               Forgot Password
             </a>
+            <button onClick={handleClick} className="underline text-blue-400 hover:text-blue-600">Register</button>
+            </div>
             <div className="flex justify-between">
               <a
                 className="border-2 rounded-lg p-2 hover:scale-90 duration-300 transition ease-in-out cursor-pointer"

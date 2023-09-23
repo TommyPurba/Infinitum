@@ -1,4 +1,6 @@
-import { Dashboard } from "@/components/dashboard";
+import { Dashboard } from "@/components/Dashboard/dashboard";
+
+
 
 async function getEvent() {
   const res = await fetch("https://eventmakers-api.vercel.app/api/event", {
