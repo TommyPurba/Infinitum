@@ -55,7 +55,7 @@ export const Dashboard = ({ events }) => {
                       index === events.length - 2
                     ) {
                       return (
-                        <div className="space-y-3">
+                        <div className="space-y-3" key={index}>
                           <div className="card">
                             <div>{event.name}</div>
                             <div>{event.date}</div>
