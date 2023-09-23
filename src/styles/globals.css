@@ -57,4 +57,32 @@
   .iconAnimation {
     @apply border-[1px] text-button-text bg-button-main rounded-full p-2 w-fit hover:bg-button-hover hover:text-button-text-hover duration-300 transition ease-in-out cursor-pointer;
   }
+
+  .nameTitle {
+    @apply font-semibold text-2xl items-center
+  }
+
+  .nameLocation {
+    @apply font-medium text-lg items-center
+  }
+
+  .iconPhone {
+    @apply text-button-text p-2 w-fit;
+  }
+
+  .iconMail {
+    @apply text-button-text p-2 w-fit;
+  }
+
+  .iconHome {
+    @apply text-button-text p-2 w-fit;
+  }
+
+  .userpageContainer {
+    @apply bg-cyan-100/50 rounded-3xl shadow items-center p-20 shadow-sm; 
+  }
+
+  .userpageCard {
+    @apply font-medium text-lg;
+  }
 }
