@@ -24,15 +24,16 @@ export const Login = () => {
           <div className="pb-10 space-y-2">
             <p>Welcome Back! </p>
             <h1 className="text-2xl font-bold">Login to your account</h1>
-            <input
+            <input  
               value={loginData.email} 
-              type="email"
+              name="email"
               placeholder="Email"
               className="form-input loginInput"
               onChange={handleEventChange}
             />
             <input
               value={loginData.password}
+              name="password"
               type="password"
               placeholder="Password"
               className="form-input loginInput"
