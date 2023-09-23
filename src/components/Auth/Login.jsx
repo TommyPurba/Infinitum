@@ -1,15 +1,16 @@
-"use client"
+"use client";
 import Image from "next/image";
 import loginImage from "/public/avatar.png";
 import { useRouter } from "next/navigation";
-
-
+import { useLogin } from "./hooks/useLogin";
 
 export const Login = () => {
+  const { isLoading, loginData, handleEventChange, handleLogin } = useLogin();
+
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('../../register');
+    router.push("../../register");
   };
   return (
     <div className="h-screen flex justify-center items-center">
@@ -24,21 +25,33 @@ export const Login = () => {
             <p>Welcome Back! </p>
             <h1 className="text-2xl font-bold">Login to your account</h1>
             <input
+              value={loginData.email} 
               type="email"
               placeholder="Email"
               className="form-input loginInput"
+              onChange={handleEventChange}
             />
             <input
+              value={loginData.password}
               type="password"
               placeholder="Password"
               className="form-input loginInput"
+              onChange={handleEventChange}
             />
-            <button className="loginButton ">Login</button>
+            <button isLoading={isLoading} className="loginButton" onClick={handleLogin}>Login</button>
             <div className="flex gap-2">
-            <a href="http://" className="underline text-blue-400 hover:text-blue-600  ">
-              Forgot Password
-            </a>
-            <button onClick={handleClick} className="underline text-blue-400 hover:text-blue-600">Register</button>
+              <a
+                href="http://"
+                className="underline text-blue-400 hover:text-blue-600  "
+              >
+                Forgot Password
+              </a>
+              <button
+                onClick={handleClick}
+                className="underline text-blue-400 hover:text-blue-600"
+              >
+                Register
+              </button>
             </div>
             <div className="flex justify-between">
               <a
