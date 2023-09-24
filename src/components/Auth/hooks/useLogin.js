@@ -38,7 +38,7 @@ export const useLogin = () => {
       alert("pasword anda benar bro...");
       console.log(data);
       setLoading(false);
-      router.push("../../../dashboard");
+      router.push("../../dashboard");
     }
 
     // console.log(data.token);

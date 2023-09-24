@@ -16,6 +16,10 @@ export const Dashboard = ({ events }) => {
     router.push("../../../userpage")
   }
 
+  const handleclicklogout = ()=>{
+    router.push("../login")
+  }
+
   const TambahArray = () => {
     let total = 0;
 
@@ -38,7 +42,7 @@ export const Dashboard = ({ events }) => {
             <div onClick={handleclickProfile} className="linkStyle">profile</div>
           </div>
 
-          <div className="logoutButton">logout</div>
+          <div onClick={handleclicklogout} className="logoutButton">logout</div>
         </div>
 
         {/* content dashboard */}
