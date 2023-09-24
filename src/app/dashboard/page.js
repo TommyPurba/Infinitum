@@ -1,7 +1,5 @@
 import { Dashboard } from "@/components/Dashboard/dashboard";
 
-
-
 async function getEvent() {
   const res = await fetch("https://eventmakers-api.vercel.app/api/event", {
     cache: "no-cache",

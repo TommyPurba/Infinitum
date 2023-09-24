@@ -12,6 +12,8 @@ export const Card = ({ name, description, location, date }) => {
   const slicedMonth = date.slice(8, 10);
   const slicedDay = date.slice(5, 7);
 
+  const router = useRouter();
+
   function checkDate(str) {
     return /^[A-Za-z0-9]*$/.test(str);
   }
@@ -25,7 +27,11 @@ export const Card = ({ name, description, location, date }) => {
       month: "short",
     });
   }
-  
+
+  const handleClickJoin = () => {
+    router.push("../joinevent");
+  };
+
   //   const [content, setContent] = useState("");
   //   const router = useRouter();
 
@@ -79,7 +85,7 @@ export const Card = ({ name, description, location, date }) => {
         <div className="descriptionTitle">{description}</div>
 
         <div className=" flex justify-end">
-          <button className="joinButton">Join Event</button>
+          <button onClick={handleClickJoin} className="joinButton">Join Event</button>
         </div>
       </div>
     </div>

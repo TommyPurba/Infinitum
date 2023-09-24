@@ -5,8 +5,17 @@ import { CalendarCheck2, Users } from "lucide-react";
 import dashboardBack from "@/assets/dashboard-back.jpg";
 import Image from "next/image";
 import { CardDashboard } from "./CardDashboard";
+import { useRouter } from "next/navigation";
+
 
 export const Dashboard = ({ events }) => {
+
+  const router = useRouter();
+
+  const handleclickProfile = ()=>{
+    router.push("../../../userpage")
+  }
+
   const TambahArray = () => {
     let total = 0;
 
@@ -26,7 +35,7 @@ export const Dashboard = ({ events }) => {
           <div className="flex items-center justify-center text-sm font-semibold py-3 px-6 gap-4 bg-wrn rounded-full">
             <div className="linkStyle">Event</div>
             <div className="linkStyle">about</div>
-            <div className="linkStyle">profile</div>
+            <div onClick={handleclickProfile} className="linkStyle">profile</div>
           </div>
 
           <div className="logoutButton">logout</div>

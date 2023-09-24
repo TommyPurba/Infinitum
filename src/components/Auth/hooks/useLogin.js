@@ -32,7 +32,7 @@ export const useLogin = () => {
     );
     const data = await res.json();
     if (data.message === "User not found") {
-      alert("User not found");
+      alert("register dulu bre.. kalau mau lihat dahbordnya");
     } else {
       Cookies.set("token", data.token);
       alert("pasword anda benar bro...");
